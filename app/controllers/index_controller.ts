@@ -9,7 +9,7 @@ export default class IndexController {
     return view.render('pages/home', { successMessage })
   }
 
-  public async contact({ request, response, view }: HttpContext) {
+  public async contact({ request, response }: HttpContext) {
     const ip = request.ip()
     const { name, email, message } = request.only(['name', 'email', 'message'])
 
