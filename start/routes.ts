@@ -8,5 +8,10 @@
 */
 
 import router from '@adonisjs/core/services/router'
+// import { messageMeThrottle } from '#start/limiter'
+const IndexController = () => import('#controllers/index_controller')
 
-router.on('/').render('pages/home')
+router.get('/', [IndexController, 'renderHome'])
+
+router.post('/contact', [IndexController, 'contact'])
+// .use(messageMeThrottle)

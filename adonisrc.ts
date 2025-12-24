@@ -49,6 +49,8 @@ export default defineConfig({
     () => import('@adonisjs/vite/vite_provider'),
     () => import('@adonisjs/shield/shield_provider'),
     () => import('@adonisjs/static/static_provider'),
+    // I already installed limiter but didnt hook up a db to it, which is required.
+    // () => import('@adonisjs/limiter/limiter_provider')
   ],
 
   /*
